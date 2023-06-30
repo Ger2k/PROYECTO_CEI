@@ -1,0 +1,216 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	height: 100vh;
+	width: 100%;	
+	background-color: black;
+}
+.pantalla{	
+	height: 563px;
+    width: 664px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    right: 0;
+    margin: 35px 70px 0 0;
+    background-color: transparent;
+}
+.contenedor_texto{
+	height: 473px;
+    width: 606px;
+    background-color: black;
+    border-radius: 10px;
+    background: url(../Img/GreenScreen.png) no-repeat 100%;
+    background-size: 100%;
+    filter: drop-shadow(0px 0px 25px green);
+}
+.texto_pantalla{
+	padding: 75px 66px;
+    color: #acfd9b80;
+    font-family: 'VT323', monospace;
+    background-color: transparent;
+}
+.contenedor_texto span{
+	background-color: transparent;
+}
+button{
+	background: #101010;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 24px;
+	margin: 0 10px;
+	padding: .5rem;
+	text-transform: uppercase;
+	font-family: 'VT323', monospace;
+}
+.botones button{
+	width: 130px;
+}
+button:hover{
+	background: #BCBCBC;
+}
+p span, .barra_input, .imagen_modal{
+	opacity: 0;
+	text-shadow: 0 0 2px white;
+}
+.visible{
+	opacity: 1;
+	text-shadow: 0 0 20px #3e9f26;
+}
+.teclado{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.argumento, .descripcion, .mecanicas{
+	display: none;
+}
+.botones{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 20px;
+}
+.fondo{
+	height: 100vh;
+    width: 100%;
+    background: black url(../Img/LOGO.jpg) no-repeat 100%;
+    background-size: 47%;
+    background-position: 486px 643px;
+    position: absolute;
+}
+.redGuy{
+	height: 100vh;
+    width: 100%;
+	background: black url(../Img/RedGuy.png) no-repeat 100%;
+    background-size: 30%;
+    position: absolute;
+    background-color: transparent;
+    background-position: bottom left;
+}
+.modal{
+	margin-top: 15px;
+}
+.imagen_modal{
+	position: absolute;
+    height: 295px;
+    width: 497px;
+    top: 70px;
+    right: 85px;
+    border-radius: 5px;
+    z-index: 1;
+}
+a{
+	position: absolute;
+	top: 10px;
+	left: 30px;
+	font-size: 3em;
+	color: green;
+	text-decoration: none;
+	font-family: 'VT323', monospace;
+}
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width:1015px){
+
+	.fondo, .redGuy{
+		display: none;
+	}
+	.pantalla{	
+		width: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		left:0;
+		margin-top: 60px;
+	}
+	.contenedor_texto{
+    	width: 90%;
+	    background-color: transparent;
+	    padding-top: 10px;
+	    background-size: 81%;
+	    background-position: 93px;  		
+	}
+	.texto_pantalla{
+		color: #acfd9b80;
+	    font-family: 'VT323', monospace;
+	    background-color: transparent;
+	    font-size: 1em;
+	    position: relative;
+   		left: 11%;
+   		padding: 6% 8% 0;
+   		margin: 0 111px 0 0;
+   		top: 50px;
+	}
+	p .visible{
+		animation: none;
+	}
+	.botones{
+	    margin: 20px auto;
+	    flex-wrap: wrap;
+	}
+	button{
+		margin: 8px 8px;
+		font-size: 1.5em;
+	}
+	.teclado{
+		position: absolute;
+		bottom: -95px;
+		margin: auto auto;
+	}
+	.imagen_modal{
+		z-index: 1;
+		position: absolute;
+   	 	width: 85%;
+   	 	height: unset;
+		margin: 0 auto;
+		top: unset;
+		right: unset;
+	}
+}
+
+@media screen and (max-width:808px){
+
+
+	.contenedor_texto{
+		height: unset;
+	    width: 70%;
+	    background: unset;
+	}
+	.texto_pantalla{
+		padding: 20px 20px;
+		margin: 0 10px;
+		left: unset;
+		border-radius: 10px;
+	    background: black;
+	    border: solid 1px grey;
+	}
+	.pantalla{
+		margin-top: 35px;
+	}
+	.modal{
+		display: none;
+	}
+	.teclado{
+		position: relative;
+		top: 40px;
+	}
+	.imagen_modal{
+		display: none;
+	}
+}
+@media screen and (max-width:407px){
+	.teclado{
+		top: 110px;
+	}
+}

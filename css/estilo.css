@@ -1,0 +1,89 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.contenedor{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;	
+	align-items: center;
+	background-image:linear-gradient(to top right,red,hotpink);
+}
+.layer{	
+    overflow: hidden;
+    height: 100%;
+    width: calc(100% / 3);    
+	object-fit: cover;
+}
+.centro{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.izquierda a img{
+	height: 100%;
+	object-position: -475px 0px;
+}
+.centro a img{
+	height: 100%;
+	object-position: -505px 0px;
+}
+.derecha a img{
+	height: 100%;
+	object-position: -884px 0px;
+}
+.logo{
+	height: 80%;
+	width: 80%;
+	margin: 20px 10px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width:936px){
+
+	/*cambiamos la orientación de las imágenes y ajustamos su posición*/
+
+	.contenedor{
+		flex-direction: column;
+	}
+	.layer{		
+		height: calc(100vh / 3);
+		width: 100%;
+	}
+	.logo{
+		display: none;
+	}
+	.izquierda a img{
+		object-fit: cover;
+		height: 50vh;
+		width: 100%;
+		object-position: unset;
+	}
+	.centro a img{
+		object-fit: cover;		
+		height: 50vh;
+		width: 100%;
+		object-position: unset;
+	}
+	.derecha a img{
+		object-fit: cover;
+		height: 50vh;
+		width: 100%;
+		object-position: unset;
+	}
+}
+@media screen and (max-width:666px){
+	.derecha a img{
+		object-position: right;
+	}
+	.miniaturas img{
+		width: 49%;
+	}
+}
